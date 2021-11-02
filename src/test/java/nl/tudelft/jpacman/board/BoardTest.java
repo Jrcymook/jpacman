@@ -20,25 +20,33 @@ class BoardTest {
         {}
     };
     //private final Board board = new Board(grid);
-
+    /**
+     * 
+     */
     @Test
     void testInvariant() {
         Board board = new Board(grid);
         assertThat(board.invariant()).isTrue();
     }
-
+    /**
+     * 
+     */
     @Test
     void testWidth() {
         Board board = new Board(grid);
         assertThat(board.getWidth()).isEqualTo(1);
     }
-
+    /**
+     * 
+     */
     @Test
     void testHeight() {
         Board board = new Board(grid);
         assertThat(board.getHeight()).isEqualTo(1);
     }
-
+    /**
+     * 
+     */
     @Test
     void testSquareAt() {
         Board board = new Board(grid2);
