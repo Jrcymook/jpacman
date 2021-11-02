@@ -1,48 +1,36 @@
 package nl.tudelft.jpacman.board;
 
-import org.junit.jupiter.api.Test;
-
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.mockito.Mockito.mock;
+import org.junit.jupiter.api.Test;
 /**
- * Basic implementation of square.
+ * A very simple (and not particularly useful)
+ * test class to have a starting point where to put tests.
  *
- * @author Jeroen Roosen 
+ * @author Arie van Deursen
  */
-
-class BoardTest {
-
-    private final Square[][] grid = {
-        { mock(Square.class)}
-    };
-
-    private final Square[][] grid2 = {
-        {}
-    };
-    //private final Board board = new Board(grid);
+public class BoardTest {
     /**
-     * 
+     * Do we get the correct delta when moving north?
      */
     @Test
-    void testInvariant() {
-        Board board = new Board(grid);
-        assertThat(board.invariant()).isTrue();
+    void testboard() {
+        Square[][] oneoneBoard = {
+            { mock(BasicSquare.class) },
+            { mock(BasicSquare.class) }
+        };
+        Board board = new Board(oneoneBoard);
+        assertThat(board.invariant()).isEqualTo(true);
     }
-    /**
-     * 
-     */
-    @Test
-    void testWidth() {
-        Board board = new Board(grid);
-        assertThat(board.getWidth()).isEqualTo(1);
-    }
-    /**
-     * 
-     */
-    @Test
-    void testHeight() {
-        Board board = new Board(grid);
-        assertThat(board.getHeight()).isEqualTo(1);
-    }
-    
+
+//    @Test
+//    void squareAt() {
+//        Square[][] oneoneBoard = {
+//            { null },
+//            { mock(BasicSquare.class) }
+//        };
+//        Board board = new Board(oneoneBoard);
+//        assertThat(board.invariant()).isEqualTo(true);
+//    }
+
 }
