@@ -44,12 +44,5 @@ class BoardTest {
         Board board = new Board(grid);
         assertThat(board.getHeight()).isEqualTo(1);
     }
-    /**
-     * 
-     */
-    @Test
-    void testSquareAt() {
-        Board board = new Board(grid2);
-        assertThat(board.squareAt(0, 0)).isEqualTo(grid2[0][0]);
-    }
+    
 }
