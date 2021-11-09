@@ -47,7 +47,9 @@ public class MapParserTest {
      * Test for the parseMap method (good map).
      */
     @Test public void testParseMapWrong1() {
-        PacmanConfigurationException thrown = Assertions.assertThrows( PacmanConfigurationException.class, () -> { MockitoAnnotations.initMocks(this);
+        PacmanConfigurationException thrown =
+            Assertions.assertThrows(PacmanConfigurationException.class, () -> {
+                MockitoAnnotations.initMocks(this);
                 assertNotNull(boardFactory);
                 assertNotNull(levelFactory);
                 MapParser mapParser = new MapParser(levelFactory, boardFactory);
